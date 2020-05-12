@@ -154,6 +154,7 @@ export default {
     }
     .roomPic {
       position: relative;
+      cursor: pointer;
     }
     .roomPic > img {
       width: 100%;
