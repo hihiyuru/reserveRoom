@@ -102,7 +102,7 @@ export default {
   position: relative;
   .el-carousel__indicators--horizontal {
     bottom: 41px;
-    left: 14vw;
+    left: 12vw;
     transform: translateX(-50%);
   }
   .el-carousel__button {
@@ -140,7 +140,7 @@ export default {
       color: #ffffff;
       margin-bottom: 10px;
       font-size: 14px;
-      padding: 0px 50px;
+      padding: 0px 15px;
       h2,
       p {
         margin: 15px 0;
