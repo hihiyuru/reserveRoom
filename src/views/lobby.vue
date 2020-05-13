@@ -21,7 +21,7 @@
         </div>
       </div>
       <!-- 右方區塊 -->
-      <div class="rightItem">
+      <div class="rightItem" v-loading.fullscreen="fullscreenLoading">
         <div class="smallRoom">
           <div class="roomPic" v-for="(room,index) in roomDetail.slice(0,3)" :key="index">
             <img :src="room.pic" alt="房間照片" />
@@ -56,6 +56,7 @@ export default {
   },
   data() {
     return {
+      fullscreenLoading: true,
       carousel: [
         { pic: require("../assets/img/house/house01.jpeg") },
         { pic: require("../assets/img/house/house02.jpeg") },
@@ -77,6 +78,7 @@ export default {
               id: element.id
             });
           });
+          this.fullscreenLoading = false;
         }
         console.log("this.roomDetail", this.roomDetail);
       });

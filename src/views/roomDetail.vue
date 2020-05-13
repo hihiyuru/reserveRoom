@@ -1,6 +1,6 @@
 <template>
   <div class="roomDetail">
-    <div class="leftWrap">
+    <div class="leftWrap" v-loading.fullscreen="fullscreenLoading">
       <!-- 左方幻燈片區域 -->
       <el-carousel height="100vh" :interval="7000" arrow="never">
         <el-carousel-item v-for="(item,index) in roomPic" :key="index">
@@ -143,6 +143,7 @@ export default {
   },
   data() {
     return {
+      fullscreenLoading: true,
       dialogVisible: false, // 彈窗
       calendarData: [],
       value: new Date(),
@@ -211,6 +212,7 @@ export default {
           this.amenities = res.data.room[0].amenities;
           console.log("this.amenities", this.amenities);
         }
+        this.fullscreenLoading = false;
       });
     },
     dayClick: function(date, dateStr) {
