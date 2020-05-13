@@ -102,7 +102,7 @@ export default {
   position: relative;
   .el-carousel__indicators--horizontal {
     bottom: 41px;
-    left: 12vw;
+    left: 11vw;
     transform: translateX(-50%);
   }
   .el-carousel__button {
@@ -139,6 +139,7 @@ export default {
     .HouseInfo {
       color: #ffffff;
       margin-bottom: 10px;
+      font-size: 12px;
       h2,
       p {
         margin: 15px 0;

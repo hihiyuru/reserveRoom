@@ -300,6 +300,7 @@ export default {
       padding: 15px 50px;
       width: 140px;
       font-size: 20px;
+      cursor: pointer;
     }
   }
   .rightWrap {
