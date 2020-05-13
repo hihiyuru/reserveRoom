@@ -12,6 +12,7 @@
           </el-form-item>
           <el-form-item label="入住日期">
             <el-date-picker
+              :picker-options="pickerOptions0"
               v-model="startTime"
               type="date"
               placeholder="選擇日期"
@@ -21,6 +22,7 @@
           </el-form-item>
           <el-form-item label="退房日期">
             <el-date-picker
+              :picker-options="pickerOptions1"
               v-model="endTime"
               type="date"
               placeholder="選擇日期"
@@ -202,6 +204,29 @@ export default {
   },
   data() {
     return {
+      pickerOptions0: {
+        //结束时间不能大于开始时间
+        disabledDate: time => {
+          if (this.endTime) {
+            return (
+              time.getTime() > new Date(this.endTime).getTime()
+            );
+          } else {
+            return time.getTime() < Date.now() - 8.64e7;
+          }
+        }
+      },
+      pickerOptions1: {
+        disabledDate: time => {
+          if (this.startTime) {
+            return (
+              time.getTime() <
+              new Date(this.startTime).getTime() -
+                1 * 24 * 60 * 60 * 1000
+            );
+          }
+        }
+      },
       err: "",
       showVeiw: "booking",
       block: [
@@ -354,6 +379,7 @@ export default {
       padding: 50px 80px;
       .el-form-item__label {
         color: #ffffff;
+        font-size: 14px;
       }
       .el-date-editor.el-input,
       .el-date-editor.el-input__inner {
@@ -406,6 +432,7 @@ export default {
         margin: 30px 0;
         p {
           line-height: 1.5;
+          font-size: 14px;
         }
       }
       .amenities {

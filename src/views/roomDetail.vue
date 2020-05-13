@@ -249,6 +249,7 @@ export default {
       p {
         margin-left: 10px;
         color: #38470b;
+        font-size: 14px;
       }
     }
     .el-carousel.el-carousel--horizontal {
@@ -277,7 +278,7 @@ export default {
       text-align: center;
     }
     .oneNight > h2 {
-      font-size: 32px;
+      font-size: 36px;
       display: inline-block;
       color: #38470b;
     }
@@ -296,8 +297,9 @@ export default {
     .booking > p {
       color: #ffffff;
       background-color: #38470b;
-      padding: 10px 50px;
-      width: 100px;
+      padding: 15px 50px;
+      width: 140px;
+      font-size: 20px;
     }
   }
   .rightWrap {
@@ -308,16 +310,18 @@ export default {
       align-items: flex-end;
     }
     h1 {
-      font-size: 50px;
+      font-size: 40px;
       font-weight: 800;
       color: #38470b;
     }
     .title > p {
       color: #38470b;
       font-weight: 600;
+      font-size: 14px;
     }
     .roomRuleWrap {
       margin: 50px 0;
+      font-size: 14px;
     }
     .roomRuleWrap > p {
       line-height: 2;
@@ -336,7 +340,7 @@ export default {
       .iconItem {
         width: 14.2857%;
         box-sizing: border-box;
-        padding: 0 30px;
+        padding: 0 3%;
         margin: 10px 0;
       }
       .iconItem > img {
