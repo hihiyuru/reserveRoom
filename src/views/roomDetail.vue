@@ -18,7 +18,15 @@
           <p>Booking now</p>
         </div>
       </div>
+      <!-- 返回箭頭 -->
+      <div class="arrowWrap" @click="goHome">
+        <div class="arrowItem">
+          <img src="../assets/img/icon/arrow.png" alt />
+        </div>
+        <p>{{$t('查看其他房型')}}</p>
+      </div>
     </div>
+    <!-- 右方區域 -->
     <div class="rightWrap">
       <!-- 標題區域 -->
       <div class="title">
@@ -209,6 +217,9 @@ export default {
       console.log(date);
       console.log(dateStr);
       console.log(this.value);
+    },
+    goHome() {
+      this.$router.go(-1);
     }
   }
 };
@@ -225,6 +236,19 @@ export default {
     position: fixed;
     top: 0;
     left: 0;
+    .arrowWrap {
+      position: absolute;
+      top: 10vh;
+      left: 5vw;
+      display: flex;
+      align-items: center;
+      z-index: 4002;
+      cursor: pointer;
+      p {
+        margin-left: 10px;
+        color: #38470b;
+      }
+    }
     .el-carousel.el-carousel--horizontal {
       width: 100%;
     }
