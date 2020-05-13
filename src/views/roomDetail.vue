@@ -331,6 +331,7 @@ export default {
       ul > li {
         line-height: 1.5;
         color: #38470b;
+        font-size: 14px;
       }
     }
     .amenities {
