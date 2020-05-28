@@ -2,7 +2,7 @@ export default (api) => {
   return {
     namespaced: true,
     state: {
-      roomInfo: [], //銀行卡是否綁定
+      roomInfo: [],
     },
     getters: {
       roomInfo: state => state.roomInfo,
